@@ -3,12 +3,12 @@ NASM=/opt/local/bin/nasm
 NASMFLAGS=-f macho64 
 LDFLAGS=-macosx_version_min 10.8.0 -lSystem
 
-PGMS=foo
+PGMS=hello_world
 
 .SUFFIXES: .asm .o
 .PHONY: clean
 
-all: foo
+all: $(PGMS)
 
 %.o: %.asm
 	$(NASM) $(NASMFLAGS) -o $@ $<
