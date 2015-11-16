@@ -17,7 +17,7 @@ _main:
 	mov	rdi, 0
 	syscall
 
-section .data
+section .rodata
 
 txt:	db	"Hello, World!", 10
 .len:	equ	$ - txt

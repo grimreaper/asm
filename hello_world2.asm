@@ -15,6 +15,6 @@ _main:
 	mov	rdi, 0
 	syscall
 
-section .data
+section .rodata
 
 txt:	db	"Hello, World!", `\n`, `\0`
