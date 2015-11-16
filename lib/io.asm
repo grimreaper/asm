@@ -10,4 +10,4 @@ c_string_out:
 	call printf
 	leave
 	ret
-.pure_string_format db "%s", 10, 0
+.pure_string_format db "%s", 0
