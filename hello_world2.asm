@@ -1,5 +1,4 @@
 %define SYS_EXIT 0x2000001
-%define STDOUT 1
 
 extern c_string_out
 
