@@ -5,6 +5,7 @@ LDFLAGS=-macosx_version_min 10.8.0 -lSystem -arch x86_64 -e _main -lc
 
 PGMS=hello_world hello_world2
 LIBS=lib/io.o
+MACRO=macro/libc.inc
 
 .SUFFIXES: .asm .o
 .PHONY: clean
