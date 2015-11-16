@@ -5,7 +5,7 @@ global c_string_out
 c_string_out:
 	enter 0, 0
 	mov rsi, rdi
-	mov rdi, .pure_string_format
+	lea rdi, [rel .pure_string_format]
 	mov rax, 1
 	call printf
 	leave
