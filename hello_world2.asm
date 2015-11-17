@@ -1,4 +1,4 @@
-%define SYS_EXIT 0x2000001
+%include "macro/common.inc"
 
 extern c_string_out
 
@@ -11,10 +11,7 @@ _main:
 	lea	rdi, [rel txt]
 	call	c_string_out
 
-	mov 	rax, SYS_EXIT
-	mov	rdi, 0
-	syscall
-
+	exit 0
 section .rodata
 
 txt:	db	"Hello, World!", `\n`, `\0`

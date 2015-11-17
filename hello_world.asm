@@ -1,5 +1,6 @@
+%include "macro/common.inc"
+
 %define SYS_WRITE 0x2000004
-%define SYS_EXIT 0x2000001
 %define STDOUT 1
 
 global _main
@@ -13,12 +14,9 @@ _main:
 	mov	rdx, txt.len
 	syscall
 
-	mov 	rax, SYS_EXIT
-	mov	rdi, 0
-	syscall
-
+	exit 0
 section .rodata
 
-txt:	db	"Hello, World!", 10
+txt:	db	"Hello, World!", `\n`
 .len:	equ	$ - txt
 
