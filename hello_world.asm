@@ -14,7 +14,7 @@ _main:
 	mov	rdx, txt.len
 	syscall
 
-	exit 0
+	M_sys_exit 0
 section .rodata
 
 txt:	db	"Hello, World!", `\n`

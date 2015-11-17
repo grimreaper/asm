@@ -10,7 +10,7 @@ LIBS=$(LIB_IO)
 MACRO=macro/libc.inc macro/common.inc
 
 .SUFFIXES: .asm .o
-.PHONY: clean
+.PHONY: clean test
 
 all: $(PGMS)
 
@@ -26,3 +26,6 @@ $(PGMS) : % : %.o
 
 clean:
 	rm -f $(PGMS) *.o $(LIBS)
+
+test: $(PGMS)
+	./tests.py

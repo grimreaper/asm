@@ -8,6 +8,11 @@ c_string_out:
 	lea rdi, [rel .pure_string_format]
 	mov rax, 1
 	call printf
+
+	mov	rdi, 0
+	mov	rax, 1
+	call	fflush
+
 	leave
 	ret
 .pure_string_format db "%s", 0

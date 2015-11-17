@@ -34,7 +34,9 @@ pnext:	mov	rdx, [r13] ; rdx = second argument
 	cmp	rbx, r12
 	jnz	pnext
 
-	exit 0
+	mov	rdi, 0
+	call	exit
+	;exit 0
 section .rodata
 
 .datum db `%u : %s\n\0`

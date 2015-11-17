@@ -1,3 +1,4 @@
+%include "macro/libc.inc"
 %include "macro/common.inc"
 
 extern c_string_out
@@ -11,7 +12,8 @@ _main:
 	lea	rdi, [rel txt]
 	call	c_string_out
 
-	exit 0
+	mov	rdi, 0
+	call exit
 section .rodata
 
-txt:	db	"Hello, World!", `\n`, `\0`
+txt:	db	`Hello, World!\n\0`
