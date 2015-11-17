@@ -7,7 +7,7 @@ LIB_IO=lib/io.o
 
 PGMS=hello_world hello_world2 argv
 LIBS=$(LIB_IO)
-MACRO=macro/libc.inc
+MACRO=macro/libc.inc macro/common.inc
 
 .SUFFIXES: .asm .o
 .PHONY: clean
@@ -18,7 +18,7 @@ hello_world2 argv: LDLIBS+=-lc
 
 hello_world2 argv: $(LIB_IO)
 
-%.o: %.asm
+%.o: %.asm $(MACRO)
 	$(NASM) $(NASMFLAGS) -o $@ $<
 
 $(PGMS) : % : %.o
