@@ -1,0 +1,1 @@
+extern c_string_out

@@ -1,7 +1,6 @@
 %include "macro/libc.inc"
 %include "macro/common.inc"
-
-extern c_string_out
+%include "lib/io.inc"
 
 global _main
 
