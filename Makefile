@@ -3,7 +3,7 @@ NASM=/opt/local/bin/nasm
 NASMFLAGS=-f macho64 -g -w+all
 LDFLAGS=-macosx_version_min 10.8.0 -lSystem -arch x86_64 -e _main $(LDLIBS)
 
-LIB_IO_PGMS=hello_world2 argv
+LIB_IO_PGMS=hello_world2 argv envp
 LIB_IO=lib/io.o
 
 PGMS=$(sort $(LIB_IO_PGMS) hello_world)

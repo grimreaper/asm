@@ -11,6 +11,7 @@ _main:
 	; On Entry:
 	; 	rdi = argc
 	; 	rsi = argv
+	;	rdx = envp
 
 	; Registers
 	; rbx = counter; callee saved
@@ -34,9 +35,7 @@ pnext:	mov	rdx, [r13] ; rdx = second argument
 	cmp	rbx, r12
 	jnz	pnext
 
-	mov	rdi, 0
-	call	exit
-	;exit 0
+	M_sys_exit 0
 section .rodata
 
 .datum db `%u : %s\n\0`
